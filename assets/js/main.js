@@ -399,21 +399,6 @@
 					});
 
 
-		// Obtener todos los enlaces que van a cambiar las secciones
-				const links = document.querySelectorAll('.toggle-reto');
-
-				// Añadir evento de click para cada enlace
-				links.forEach(link => {
-				link.addEventListener('click', function(event) {
-					event.preventDefault(); // Prevenir el comportamiento por defecto del enlace
-					const targetId = link.getAttribute('data-target'); // Obtener el id de la sección
-
-					// Obtener la sección correspondiente
-					const targetSection = document.getElementById(targetId);
-
-					// Alternar la clase active para mostrar/ocultar la sección
-					targetSection.classList.toggle('active');
-				});
-				});
+		
 			
 })(jQuery);
