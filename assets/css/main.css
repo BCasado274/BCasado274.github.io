@@ -578,35 +578,10 @@ input, select, textarea {
 	}
 
 
-	/* ----------------------------------------------------------------------------------------- */
-	/* Estilos de los enlaces recuadrados */
-nav ul li a {
-	display: block;
-	padding: 10px;
-	margin: 5px 0;
-	background-color: #007bff;
-	color: white;
-	text-decoration: none;
-	border-radius: 5px;
-	text-align: center;
-	transition: background-color 0.3s ease;
-  }
+	/* SECCIÓN DE PRUEBA ----------------------------------------------------------------------------------------- */
+	
   
-  nav ul li a:hover {
-	background-color: #0056b3;
-  }
-  
-  /* Estilos de las secciones de contenido */
-  .reto-section {
-	display: none;
-	margin-top: 20px;
-  }
-  
-  .reto-section.active {
-	display: block;
-  }
-  
-  /* ------------------------------------------------------------------------------------------- */
+  	/* FIN SECCIÓN DE PRUEBA------------------------------------------------------------------------------------------- */
 
 /* Box */
 
