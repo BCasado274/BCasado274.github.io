@@ -1681,4 +1681,8 @@ input, select, textarea {
 		#cursoCloud {
 			overflow: visible !important;
 		}
+
+		#cursoCloud nav {
+			border: 2px solid red; /* Un borde rojo para verlo */
+		}
 		
