@@ -104,46 +104,31 @@
 						<article id="AWS">
 							<h1><strong>AWS</strong></h1>
 							<p>AWS es un servicio...</p>
-							<section id="configuracion-entorno">
-								<h2>🔹 Configuración del Entorno y Seguridad en AWS</h2>
-								
-								<p>Para asegurar un entorno en la nube bien configurado y protegido, seguí estas buenas prácticas de seguridad, redes y monitoreo en AWS:</p>
-								
-								<h3>🔹 1. Seguridad de la Cuenta</h3>
-								<ul>
-									<li><strong>Activación de MFA:</strong> Implementé la autenticación multifactor (MFA) para agregar una capa adicional de seguridad.</li>
-									<li><strong>Gestión de usuarios y permisos:</strong> Configuré AWS Identity and Access Management (<strong>IAM</strong>) para crear usuarios, grupos y roles con privilegios mínimos necesarios.</li>
-								</ul>
+							<section id="configuracion-seguridad">
+								<h3><strong>Configuración recomendada para un entorno seguro en AWS</strong></h3>
+								<p>Para asegurar un entorno en AWS, existen varias prácticas recomendadas que ayudarían a mejorar la seguridad, la gestión de la red, el monitoreo y la optimización de costos.</p>
 							
-								<h3>🔹 2. Configuración de la Red</h3>
-								<ul>
-									<li><strong>Creación de una VPC:</strong> Definí una <a href="https://en.wikipedia.org/wiki/Amazon_Virtual_Private_Cloud" target="_blank">Virtual Private Cloud (VPC)</a> para aislar recursos dentro de una red segura.</li>
-									<li><strong>Configuración de subredes y acceso:</strong> Implementé subredes, gateways de internet y tablas de rutas para controlar el tráfico de red.</li>
-								</ul>
+								<h4>🔒 Configuración de seguridad de la cuenta</h4>
+								<p>Una cuenta segura en AWS debería incluir autenticación multifactor (MFA), que añade una capa extra de seguridad al requerir algo más que una contraseña. También es importante usar AWS Identity and Access Management (IAM) para crear usuarios, grupos y roles, asegurando un acceso controlado a los recursos. Todas estas configuraciones se pueden realizar en la sección “IAM” dentro de la AWS Management Console.</p>
 							
-								<h3>🔹 3. Implementación de Buenas Prácticas de Seguridad</h3>
-								<ul>
-									<li><strong>Grupos de Seguridad y NACLs:</strong> Configuré reglas en los <strong>Security Groups</strong> y <strong>Network ACLs</strong> para restringir el acceso a instancias y bases de datos.</li>
-									<li><strong>Cifrado de Datos:</strong> Utilicé <strong>AWS Key Management Service (KMS)</strong> para gestionar claves de cifrado.</li>
-								</ul>
+								<h4>🌐 Configuración de red</h4>
+								<p>Para aislar los recursos y definir reglas de conexión, es recomendable establecer una <strong>Virtual Private Cloud (VPC)</strong>. Esto permite crear una red virtual segura dentro de AWS. Además, se deben configurar <strong>subredes, gateways de internet y tablas de rutas</strong> para gestionar correctamente el tráfico.</p>
 							
-								<h3>🔹 4. Monitoreo y Gestión del Entorno</h3>
-								<ul>
-									<li><strong>Amazon CloudWatch:</strong> Implementé métricas y alertas para monitorear el rendimiento y la actividad de los recursos.</li>
-									<li><strong>AWS CloudTrail:</strong> Activé auditoría de eventos para rastrear cambios y accesos a la cuenta.</li>
-								</ul>
+								<h4>🛡️ Implementación de buenas prácticas de seguridad</h4>
+								<p>Para reforzar la seguridad, se recomienda configurar <strong>grupos de seguridad</strong> y <strong>listas de control de acceso a la red (NACLs)</strong>, limitando el acceso a instancias específicas. También es crucial cifrar los datos almacenados utilizando el servicio <strong>AWS Key Management Service (KMS)</strong>.</p>
 							
-								<h3>🔹 5. Planificación de Continuidad del Negocio</h3>
-								<ul>
-									<li><strong>Respaldo y Recuperación:</strong> Configuré soluciones de respaldo en <strong>Amazon S3</strong> y <strong>AWS Backup</strong> para proteger datos críticos.</li>
-								</ul>
+								<h4>📊 Configuración de monitoreo y gestión</h4>
+								<p>Un entorno en AWS debería incluir herramientas de monitoreo como <strong>Amazon CloudWatch</strong> para rastrear el rendimiento y alertar sobre eventos críticos. Además, <strong>AWS CloudTrail</strong> permite auditar y registrar todas las acciones realizadas en la cuenta.</p>
 							
-								<h3>🔹 6. Optimización de Costos</h3>
-								<ul>
-									<li><strong>Monitoreo de Gastos:</strong> Utilicé <strong>AWS Cost Management Console</strong> para analizar costos y definir presupuestos.</li>
-									<li><strong>Uso eficiente de recursos:</strong> Implementé estrategias como <strong>instancias reservadas y autoescalado</strong> para optimizar costos.</li>
-								</ul>
+								<h4>🔄 Planificación de la continuidad del negocio</h4>
+								<p>Para garantizar la recuperación ante fallos o pérdidas de datos, es recomendable implementar soluciones de respaldo y recuperación utilizando <strong>Amazon S3</strong> y <strong>AWS Backup</strong>. Estos servicios permiten almacenar copias de seguridad y restaurar datos en caso de fallos.</p>
+							
+								<h4>💰 Optimización de costos</h4>
+								<p>Para evitar costos inesperados, se recomienda usar la <strong>AWS Cost Management Console</strong> para monitorear el uso de recursos y establecer alertas de presupuesto. También es útil elegir modelos de precios adecuados según las necesidades del proyecto.</p>
+							
+								<p>En un entorno de producción, aplicar estas configuraciones ayudaría a garantizar seguridad, eficiencia y control de costos en la nube.</p>
 							</section>
+							
 							<p>A continuación se encuentran todos los retos a los que tuve que enfrentarme durante el curso dentro de la plataforma de AWS</p>
 							<nav>
 								<ul>
