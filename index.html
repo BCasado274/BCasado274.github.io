@@ -175,6 +175,32 @@
 						<article id="GCP">
 							<h1><strong>GCP</strong></h1>
 							<p>GCP es un servicio...</p>
+							<section id="configuracion-seguridad-gcp">
+								<h3><strong>Configuración recomendada para un entorno seguro en GCP</strong></h3>
+								<p>Para garantizar la seguridad y el rendimiento en Google Cloud Platform (GCP), existen diversas prácticas recomendadas para la protección de la cuenta, la red, el monitoreo y la optimización de costos.</p>
+							
+								<h4>🔒 Configuración de seguridad de la cuenta</h4>
+								<p>Un entorno seguro en GCP debería incluir autenticación multifactor (<strong>MFA</strong>) para proteger el acceso a la cuenta. Además, es recomendable usar <strong>Identity and Access Management (IAM)</strong> para asignar permisos de manera granular a usuarios y servicios, siguiendo el principio de mínimo privilegio.</p>
+							
+								<h4>🌐 Configuración de red</h4>
+								<p>Para aislar y controlar el tráfico en la red, se recomienda configurar una <strong>Virtual Private Cloud (VPC)</strong>. También es importante definir <strong>subredes</strong>, <strong>firewalls</strong> y <strong>Cloud NAT</strong> para gestionar el acceso a instancias sin direcciones IP públicas.</p>
+							
+								<h4>🛡️ Implementación de buenas prácticas de seguridad</h4>
+								<p>Para mejorar la seguridad, se deberían establecer reglas estrictas en <strong>Cloud Firewall</strong>, además de utilizar <strong>Cloud Armor</strong> para protegerse contra ataques DDoS. El cifrado de datos en reposo y en tránsito también es esencial, utilizando <strong>Cloud Key Management Service (KMS)</strong>.</p>
+							
+								<h4>📊 Configuración de monitoreo y gestión</h4>
+								<p>Para un monitoreo efectivo, se recomienda habilitar <strong>Cloud Logging</strong> y <strong>Cloud Monitoring</strong>, que permiten supervisar métricas de rendimiento y registrar eventos. Además, <strong>Cloud Audit Logs</strong> ayuda a rastrear cambios y detectar accesos no autorizados.</p>
+							
+								<h4>🔄 Planificación de la continuidad del negocio</h4>
+								<p>Para garantizar la recuperación ante desastres, se debería implementar estrategias de respaldo utilizando <strong>Cloud Storage</strong>, <strong>Cloud SQL Backups</strong> y <strong>Disaster Recovery con GCP</strong>. También es recomendable distribuir la carga con <strong>Cloud Load Balancing</strong> para mejorar la resiliencia.</p>
+							
+								<h4>💰 Optimización de costos</h4>
+								<p>Para un uso eficiente de los recursos, se recomienda configurar alertas en <strong>Cloud Billing</strong> y utilizar herramientas como <strong>Committed Use Contracts</strong> y <strong>Preemptible VMs</strong> para reducir costos. También se pueden aplicar estrategias de escalabilidad automática con <strong>Compute Engine Autoscaler</strong>.</p>
+							
+								<p>En un entorno de producción, aplicar estas configuraciones ayudaría a garantizar seguridad, rendimiento y control de costos en la nube.</p>
+							</section>
+							
+							<h2>Retos Fundae</h2>
 							<p>A continuación se encuentran todos los retos a los que tuve que enfrentarme durante el curso</p>
 							<nav>
 								<ul>
