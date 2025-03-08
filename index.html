@@ -88,7 +88,7 @@
 						<article id="cursoCloud">
 							<h2 class="major">Curso Fundae: sistemas Cloud</h2>
 							<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-							<p>Aquí se podrá ver los retos a los que tuve que enfrentarme en cada uno de los 3 grandes servicios de nube que existen actualmente en el mercado</p>
+							<p>Aquí se podrá ver los retos a los que tuve que enfrentarme en cada uno de los 3 grandes servicios de nube que existen actualmente en el mercado para dominar el uso sus plataformas</p>
 						
 							<nav>
 								<ul>
@@ -104,7 +104,47 @@
 						<article id="AWS">
 							<h1><strong>AWS</strong></h1>
 							<p>AWS es un servicio...</p>
-							<p>A continuación se encuentran todos los retos a los que tuve que enfrentarme durante el curso</p>
+							<section id="configuracion-entorno">
+								<h2>🔹 Configuración del Entorno y Seguridad en AWS</h2>
+								
+								<p>Para asegurar un entorno en la nube bien configurado y protegido, seguí estas buenas prácticas de seguridad, redes y monitoreo en AWS:</p>
+								
+								<h3>🔹 1. Seguridad de la Cuenta</h3>
+								<ul>
+									<li><strong>Activación de MFA:</strong> Implementé la autenticación multifactor (MFA) para agregar una capa adicional de seguridad.</li>
+									<li><strong>Gestión de usuarios y permisos:</strong> Configuré AWS Identity and Access Management (<strong>IAM</strong>) para crear usuarios, grupos y roles con privilegios mínimos necesarios.</li>
+								</ul>
+							
+								<h3>🔹 2. Configuración de la Red</h3>
+								<ul>
+									<li><strong>Creación de una VPC:</strong> Definí una <a href="https://en.wikipedia.org/wiki/Amazon_Virtual_Private_Cloud" target="_blank">Virtual Private Cloud (VPC)</a> para aislar recursos dentro de una red segura.</li>
+									<li><strong>Configuración de subredes y acceso:</strong> Implementé subredes, gateways de internet y tablas de rutas para controlar el tráfico de red.</li>
+								</ul>
+							
+								<h3>🔹 3. Implementación de Buenas Prácticas de Seguridad</h3>
+								<ul>
+									<li><strong>Grupos de Seguridad y NACLs:</strong> Configuré reglas en los <strong>Security Groups</strong> y <strong>Network ACLs</strong> para restringir el acceso a instancias y bases de datos.</li>
+									<li><strong>Cifrado de Datos:</strong> Utilicé <strong>AWS Key Management Service (KMS)</strong> para gestionar claves de cifrado.</li>
+								</ul>
+							
+								<h3>🔹 4. Monitoreo y Gestión del Entorno</h3>
+								<ul>
+									<li><strong>Amazon CloudWatch:</strong> Implementé métricas y alertas para monitorear el rendimiento y la actividad de los recursos.</li>
+									<li><strong>AWS CloudTrail:</strong> Activé auditoría de eventos para rastrear cambios y accesos a la cuenta.</li>
+								</ul>
+							
+								<h3>🔹 5. Planificación de Continuidad del Negocio</h3>
+								<ul>
+									<li><strong>Respaldo y Recuperación:</strong> Configuré soluciones de respaldo en <strong>Amazon S3</strong> y <strong>AWS Backup</strong> para proteger datos críticos.</li>
+								</ul>
+							
+								<h3>🔹 6. Optimización de Costos</h3>
+								<ul>
+									<li><strong>Monitoreo de Gastos:</strong> Utilicé <strong>AWS Cost Management Console</strong> para analizar costos y definir presupuestos.</li>
+									<li><strong>Uso eficiente de recursos:</strong> Implementé estrategias como <strong>instancias reservadas y autoescalado</strong> para optimizar costos.</li>
+								</ul>
+							</section>
+							<p>A continuación se encuentran todos los retos a los que tuve que enfrentarme durante el curso dentro de la plataforma de AWS</p>
 							<nav>
 								<ul>
 									<li><a href="#reto1aws">Reto 1</a></li>
@@ -115,12 +155,13 @@
 							<section id="reto1aws">
 							
 							<h3><strong>Reto 1: Crear y configurar una cuenta en AWS</strong></h3>
-							<p>Este reto consistió en crear cuentas en uno de los servicios de nube más populares: Amazon Web Services (AWS) y Google Cloud Platform (GCP). A continuación, detallo el proceso para cada uno de los servicios, la configuración del entorno, y las alertas de presupuesto que añadí para evitar sorpresas debido a posibles cargos por el uso de herramientas de pago.</p>																
+							<p>Este reto consistió en crear mi cuenta en uno de los servicios de nube más populares: Amazon Web Services (AWS). A continuación, detallo el proceso de registro, la configuración del entorno, y las alertas de presupuesto que añadí para evitar sorpresas debido a posibles cargos por el uso de herramientas de pago.</p>																
 								
 								<p><strong>Proceso de Creación de Cuenta: </strong>
 									La creación de una cuenta en AWS comienza en su página principal, donde el usuario debe registrar una nueva cuenta ingresando su dirección de correo electrónico, eligiendo un nombre de usuario y proporcionando información personal y de facturación. Al ser una cuenta de prueba, seleccioné la opción de usar la capa gratuita de AWS, que ofrece acceso a muchos servicios sin costo durante el primer año.</p>
 								<p><strong>Configuración del Entorno: </strong>
 									Una vez creada la cuenta, el siguiente paso fue configurar el entorno de trabajo. Para ello, se accedió al AWS Management Console, donde se pueden gestionar todos los servicios de AWS. Es importante que, dado que AWS ofrece una variedad de herramientas de pago, se añadió una alerta de presupuesto en el servicio AWS Budgets para evitar cargos accidentales. Esta alerta avisa cuando se acerca al límite de uso gratuito o si se incurre en algún cargo inesperado.</p>
+								<p></p>
 								<p><strong>Algunas de las Herramientas Más Usadas: </strong>
 									Algunos de los servicios más utilizados de AWS que exploré incluyen:
 
@@ -146,6 +187,47 @@
 
 						<!-- Curso Fundae: GCP-->
 						<article id="GCP">
+							<h1><strong>GCP</strong></h1>
+							<p>GCP es un servicio...</p>
+							<p>A continuación se encuentran todos los retos a los que tuve que enfrentarme durante el curso</p>
+							<nav>
+								<ul>
+									<li><a href="#reto1gcp">Reto 1</a></li>
+									<li><a href="#reto2gcp">Reto 2</a></li>
+									<li><a href="#reto3gcp">Reto 3</a></li>
+								</ul>
+							</nav>
+							<section id="reto1gcp">
+							
+							<h3><strong>Reto 1: Crear y configurar una cuenta en GCP</strong></h3>
+							<p>Este reto consistió en crear cuentas en uno de los servicios de nube más populares: Amazon Web Services (AWS) y Google Cloud Platform (GCP). A continuación, detallo el proceso para cada uno de los servicios, la configuración del entorno, y las alertas de presupuesto que añadí para evitar sorpresas debido a posibles cargos por el uso de herramientas de pago.</p>																
+								
+								<p><strong>Proceso de Creación de Cuenta: </strong>
+									El proceso para crear una cuenta en Google Cloud es similar al de AWS. En primer lugar, el usuario debe registrarse utilizando una cuenta de Google y proporcionar información de facturación. Al igual que en AWS, se ofrece una capa gratuita con créditos para usar en los primeros 90 días, lo que permite explorar y probar muchos servicios sin coste adicional.</p>
+								<p><strong>Configuración del Entorno: </strong>
+									Tras completar el registro y la creación de la cuenta, se accedió al Google Cloud Console, el cual sirve para gestionar y configurar los diferentes servicios de la nube de Google. En este caso, también configuré una alerta de presupuesto en Google Cloud Billing para evitar el uso accidental de servicios de pago y mantener los costos dentro de los límites establecidos.</p>
+								<p><strong>Algunas de las Herramientas Más Usadas: </strong>
+									Algunos de los servicios más utilizados de GCP que exploré incluyen:
+
+								<ul>
+									<li>Compute Engine: Este servicio permite crear máquinas virtuales (VM) para ejecutar aplicaciones, servicios web y cualquier otro tipo de carga de trabajo. Es uno de los servicios más versátiles para gestionar infraestructuras en la nube.</li>
+								</ul>
+								<ul>
+									<li>Google Cloud Storage: Al igual que en AWS, GCP ofrece un servicio de almacenamiento de objetos con alta disponibilidad y escalabilidad para almacenar datos, copias de seguridad y archivos de grandes volúmenes.</li>
+								</ul>									
+								<ul>
+									<li>Cloud SDK: La herramienta de línea de comandos de Google Cloud (gcloud) permite administrar los recursos de GCP desde la terminal. Es especialmente útil para realizar tareas de automatización y manejo de recursos sin necesidad de acceder constantemente a la consola web.</li>
+								</ul></p>
+							</section>
+
+							<section id="reto2gcp"><h3><strong>Reto 2: Almacenar y recuperar archivos en Google Cloud Storage</strong></h3>
+							<p>Este reto...</p>
+							</section>
+
+							<section id="reto3gcp"><h3><strong>Reto 3: Desplegar una máquina virtual en GCP</strong></h3>
+							<p>Este reto...</p>
+							</section>
+
 
 						</article>
 
