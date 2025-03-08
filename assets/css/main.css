@@ -1672,3 +1672,13 @@ input, select, textarea {
 			visibility: visible !important;
 			color: white; /* Asegura que el texto sea visible */
 		}
+
+		#cursoCloud nav ul {
+			position: relative;
+			z-index: 10; /* Un valor alto para que esté encima */
+		}
+
+		#cursoCloud {
+			overflow: visible !important;
+		}
+		
