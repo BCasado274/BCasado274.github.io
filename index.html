@@ -198,7 +198,114 @@
 							</section>
 
 							<section id="reto2aws"><h3><strong>Reto 2: Desplegar una estancia de EC2 en AWS</strong></h3>
-							<p>Este reto...</p>
+							<p>Este documento explica cómo crear y configurar una instancia EC2 con seguridad, monitoreo, backups y acceso web.</p>
+
+							<h2>1️⃣ Creación de la Instancia EC2</h2>
+							<ol>
+								<li>Iniciar sesión en AWS Console.</li>
+								<li>Ir a <b>EC2 → Instancias → Launch Instance</b>.</li>
+								<li>Configurar los siguientes parámetros:
+									<ul>
+										<li><b>AMI:</b> Ubuntu 22.04 LTS o Amazon Linux 2.</li>
+										<li><b>Tipo de instancia:</b> t2.micro (Free Tier).</li>
+										<li><b>Par de claves:</b> dojo-key.pem.</li>
+										<li><b>Grupo de seguridad:</b> Configurar SSH (22), HTTP (80) y HTTPS (443).</li>
+									</ul>
+								</li>
+								<li>Lanzar la instancia y anotar la IP pública.</li>
+							</ol>
+
+							<h2>2️⃣ Conexión a la Instancia con SSH</h2>
+							<pre>ssh -i dojo-key.pem ubuntu@IP_PUBLICA</pre>
+							<p>Si hay problemas de permisos, ejecutar:</p>
+							<pre>icacls "dojo-key.pem" /inheritance:r /grant:r "%USERNAME%:R"</pre>
+
+							<h2>3️⃣ Configuración Inicial del Servidor</h2>
+							<p>Actualizar el sistema y herramientas básicas:</p>
+							<pre>
+						sudo apt update && sudo apt upgrade -y
+						sudo apt install -y git vim curl wget
+							</pre>
+
+							<h2>4️⃣ Configuración de Seguridad en AWS</h2>
+							<p>En <b>EC2 → Security Groups</b>, asegurarse de:</p>
+							<ul>
+								<li>✅ SSH (22): Solo accesible desde tu IP.</li>
+								<li>✅ HTTP (80): Abierto para acceso web.</li>
+								<li>✅ HTTPS (443): Activado si se usa SSL.</li>
+							</ul>
+
+							<h2>5️⃣ Instalación de un Servidor Web</h2>
+							<p>Instalar Apache:</p>
+							<pre>sudo apt install -y apache2</pre>
+							<p>Crear una página de prueba:</p>
+							<pre>echo "<h1>¡Mi dojo en la nube está online! 🏯☁️</h1>" | sudo tee /var/www/html/index.html</pre>
+
+							<h2>6️⃣ Configuración de HTTPS con SSL</h2>
+							<p>Si se usa un dominio, instalar Let's Encrypt:</p>
+							<pre>sudo certbot --apache -d midominio.com</pre>
+							<p>Para redirigir HTTP a HTTPS, agregar esto en Apache:</p>
+							<pre>
+						RewriteEngine On
+						RewriteCond %{HTTPS} !=on
+						RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+							</pre>
+
+							<h2>7️⃣ Creación de Snapshots (Backups)</h2>
+							<p>En <b>EC2 → Volumes</b>, seleccionar el volumen y crear un snapshot.</p>
+							<p>📌 AWS Free Tier permite hasta <b>30 GB gratuitos</b>.</p>
+
+							<h2>8️⃣ Monitoreo con CloudWatch</h2>
+							<p>Ir a <b>CloudWatch → Dashboards</b> y agregar métricas:</p>
+							<ul>
+								<li>✅ CPUUtilization</li>
+								<li>✅ NetworkIn / NetworkOut</li>
+							</ul>
+
+							<h2>9️⃣ Configuración de Alarmas en CloudWatch</h2>
+							<p>Crear alarmas para CPU y tráfico de red:</p>
+							<pre>
+						CPU Utilization > 80% por 5 minutos → Activar alarma
+						NetworkIn < 100 KB por 5 minutos → Activar alarma
+							</pre>
+							<p>Configurar Amazon SNS para recibir alertas por correo.</p>
+
+							<h2>📌 Costos en AWS Free Tier</h2>
+							<table border="1" cellpadding="5">
+								<tr>
+									<th>Servicio</th>
+									<th>Gratis en AWS Free Tier</th>
+								</tr>
+								<tr>
+									<td>EC2 (t2.micro)</td>
+									<td>✅ 750 horas/mes</td>
+								</tr>
+								<tr>
+									<td>Snapshots (EBS)</td>
+									<td>✅ Hasta 30 GB gratis</td>
+								</tr>
+								<tr>
+									<td>CloudWatch Metrics</td>
+									<td>✅ 10 métricas gratis</td>
+								</tr>
+								<tr>
+									<td>CloudWatch Alarms</td>
+									<td>✅ Gratis si usas métricas básicas</td>
+								</tr>
+								<tr>
+									<td>Amazon SNS</td>
+									<td>✅ 1 millón de emails gratis</td>
+								</tr>
+							</table>
+
+							<h2>🔹 Conclusión</h2>
+							<p>✅ Se configuró una instancia EC2 segura y optimizada.</p>
+							<p>✅ Se instaló un servidor web y se probó acceso HTTP/HTTPS.</p>
+							<p>✅ Se creó un backup con Snapshots.</p>
+							<p>✅ Se habilitó monitoreo con CloudWatch y alarmas con Amazon SNS.</p>
+
+							<p><b>Este documento resume la implementación de un servidor en AWS con buenas prácticas de seguridad y monitoreo.</b> 🚀🔐</p>
+						</div>
 							</section>
 
 							<section id="reto3aws"><h3><strong>Reto 3: Almacenar y recuperar archivos en S3</strong></h3>
