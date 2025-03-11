@@ -198,7 +198,64 @@
 							</section>
 
 							<section id="reto2aws"><h3><strong>Reto 2: Desplegar una estancia de EC2 en AWS</strong></h3>
-							<p>Este reto...</p>
+								<div class="section">
+									<h2>1. Creación de la Instancia</h2>
+									<p>Para crear una instancia en AWS EC2, accede a la consola de AWS y dirígete al servicio EC2.</p>
+									<img src="Lanzar_instancia.png" alt="Lanzar una instancia">
+									<img src="config_instancia3.png" alt="Configuración de instancia">
+									<img src="conifg_instancia1.png" alt="Configuración de almacenamiento">
+								</div>
+							
+								<div class="section">
+									<h2>2. Conexión a la Instancia</h2>
+									<p>Para conectarte a la instancia, utiliza SSH con la clave privada generada previamente.</p>
+									<img src="Claves_ssh.png" alt="Creación de clave SSH">
+									<img src="Conectar_instancia.png" alt="Conexión por SSH">
+								</div>
+								
+								<div class="section">
+									<h2>3. Configuración Básica</h2>
+									<p>Después de conectarte a la instancia, actualiza el sistema y configura la zona horaria.</p>
+									<img src="ActualizarsistemaInstancia.png" alt="Actualizar sistema">
+									<img src="Config_hora&hostname.png" alt="Configuración de zona horaria y hostname">
+								</div>
+								
+								<div class="section">
+									<h2>4. Instalación de Herramientas</h2>
+									<p>Instala herramientas básicas como git, vim, curl y verifica la conectividad.</p>
+									<img src="Install_herramientas&conectividad.png" alt="Instalación de herramientas">
+								</div>
+								
+								<div class="section">
+									<h2>5. Configuración del Servidor Web</h2>
+									<p>Instala y habilita Apache en la instancia.</p>
+									<img src="Config_servidorWeb1.png" alt="Instalación de Apache">
+									<img src="Enable_ServWeb.png" alt="Habilitación del servicio Apache">
+									<img src="CrearPag&verificarEstaCorriendo.png" alt="Creación de página web">
+								</div>
+								
+								<div class="section">
+									<h2>6. Configuración de Monitoreo con CloudWatch</h2>
+									<p>Para monitorear la instancia EC2, configura métricas y alarmas en CloudWatch.</p>
+									<img src="MonitoreoCloudWatch.png" alt="Métricas de CloudWatch">
+									<img src="Metricas_CloudWatch.png" alt="Selección de métricas">
+									<img src="Crear_Dashboard.png" alt="Creación de Dashboard">
+									<img src="Alarma_CloudWatch.png" alt="Configuración de alarma">
+									<img src="Alarma_CloudWatchCreada.png" alt="Alarma creada">
+								</div>
+								
+								<div class="section">
+									<h2>7. Gestión de Costos en AWS</h2>
+									<p>Para evitar costos innecesarios, revisa la facturación y el uso de recursos.</p>
+									<img src="Billing2.png" alt="Gestión de costos AWS">
+									<img src="Blling1.png" alt="Panel de costos AWS">
+								</div>
+							
+								<div class="section">
+									<h2>8. Creación de una Snapshot</h2>
+									<p>Para hacer una copia de seguridad de la instancia, crea una snapshot de tu volumen.</p>
+									<img src="Crear_Snapshot.png" alt="Creación de snapshot">
+								</div>
 							</section>
 
 							<section id="reto3aws"><h3><strong>Reto 3: Almacenar y recuperar archivos en S3</strong></h3>
